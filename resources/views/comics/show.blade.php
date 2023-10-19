@@ -3,6 +3,12 @@
 @section('main-content')
   <section class="container text-center my-3">
     <h1 class="my-5">{{ $title }} {{ $comic->title }}</h1>
+
+    <div class="my-5">
+      <a href="{{route('comics.edit', $comic)}}" class="btn btn-dark" >Modifica</a>
+
+  </div>
+
     
     <div class="container border rounded py-5">
         <div class="row justify-content-center">

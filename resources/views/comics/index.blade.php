@@ -32,13 +32,15 @@
           <tr>
             <td scope="row">{{ $comic->id}}</td>
             <td scope="col">{{ $comic->title}}</td>
-            <td scope="col">{{ $comic->price}}</td>
+            <td scope="col">{{ $comic->price}} €</td>
             <td scope="col">{{ $comic->series}}</td>
             <td scope="col">{{ $comic->sale_date}}</td>
             <td scope="col">{{ $comic->type}}</td>
-            <td scope="col">
-                <a href="{{route('comics.show', $comic)}}">
+            <td scope="col" >
+                <a href="{{route('comics.show', $comic)}}" class="m-2">
                <i class="fa-regular fa-eye"></i> </a>
+               <a href="{{route('comics.edit', $comic)}}">
+                <i class="fa-solid fa-pencil"></i> </a>
             </td>
             
           </tr>

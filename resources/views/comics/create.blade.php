@@ -20,13 +20,15 @@
                 <input type="text" id="series" name="series" class="form-control">
             </div>
             </div>
+
+            {{-- da modificare tipo di input inserire un tipo per i prezzi --}}
         <div class="container my-5">
             <div class="row justify-content-center">
                 <div class="col-4 ">
                     <label for="price">Prezzo</label>
                     <input type="text" id="price" name="price" class="form-control">
                 </div>
-
+            {{-- da modificare tipo di input inserire un tipo per le date --}}
                 <div class="col-4 ">
                     <label for="sale_date">Anno di uscita</label>
                     <input type="text" id="sale_date" name="sale_date" class="form-control">
