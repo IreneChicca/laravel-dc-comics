@@ -13,7 +13,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $title = "Fumetti";
+        return view('comics', compact('title'));
     }
 
     /**
