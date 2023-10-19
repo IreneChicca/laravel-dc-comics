@@ -14,7 +14,7 @@
            <div class="col-3  my-auto">
                 <p><strong>Titolo: </strong>{{ $comic->title }}</p>
                 <p><strong>Serie: </strong>{{ $comic->series }}</p>
-                <p><strong>Prezzo: </strong>{{ $comic->price }} €</p>
+                <p><strong>Prezzo: </strong>{{ $comic->price }} € @if($comic->price <4) <span class="text-danger"> prezzo offerta!</span> @endif </p>
                 <p><strong>Data di uscita: </strong>{{ $comic->sale_date }}</p>
                 <p><strong>Tipo: </strong>{{ $comic->type }}</p>
                 

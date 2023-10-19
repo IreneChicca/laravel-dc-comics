@@ -9,7 +9,11 @@
   <section class="container text-center my-3">
     <h1 class="my-5">{{ $title }}</h1>
     
-    
+        <div class="my-5">
+            <a href="{{route('comics.create')}}" class="btn btn-dark" >Aggiungi nuovo</a>
+
+        </div>
+
     <table class="table">
         <thead>
           <tr>

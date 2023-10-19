@@ -26,7 +26,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        $title = "Aggiungi un nuovo fumetto alla libreria";
+        return view('comics.create', compact('title'));
     }
 
     /**
