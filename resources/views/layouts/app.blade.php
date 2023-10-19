@@ -9,7 +9,11 @@
 
   <!-- Styles -->
   @vite('resources/js/app.js')
-</head>
+  <!-- Font awesome -->
+
+  @yield('css')
+
+ </head>
 
 <body>
   @include('partials._navbar')
