@@ -4,11 +4,11 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}" href="{{ route('home') }}"
+          <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active fw-bold' : '' }}" href="{{ route('home') }}"
             aria-current="page">Home<span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Route::currentRouteName() == 'comics' ? 'active' : '' }}" href="{{ route('comics') }}">Comics</a>
+          <a class="nav-link {{ Route::currentRouteName() == 'comics.index' ? 'active fw-bold' : '' }}" href="{{ route('comics.index') }}">Comics</a>
         </li>
         {{-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
