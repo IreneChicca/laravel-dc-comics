@@ -46,8 +46,9 @@
                 <form action="{{route('comics.destroy', $comic)}}" method="POST">
                   @method('DELETE')
                   @csrf
-                <button>
-                  <i class="fa-regular fa-trash-can"></i> </button>
+                <button id="del-btn">
+                  <a href="">
+                  <i class="fa-regular fa-trash-can"></i> </button></a>
                 </form>
               </div>
             </td>
