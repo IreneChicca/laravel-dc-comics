@@ -37,10 +37,19 @@
             <td scope="col">{{ $comic->sale_date}}</td>
             <td scope="col">{{ $comic->type}}</td>
             <td scope="col" >
-                <a href="{{route('comics.show', $comic)}}" class="m-2">
+              <div class="d-flex">
+                <a href="{{route('comics.show', $comic)}}" class="me-2">
                <i class="fa-regular fa-eye"></i> </a>
-               <a href="{{route('comics.edit', $comic)}}">
+               <a href="{{route('comics.edit', $comic)}}"class="me-2" >
                 <i class="fa-solid fa-pencil"></i> </a>
+
+                <form action="{{route('comics.destroy', $comic)}}" method="POST">
+                  @method('DELETE')
+                  @csrf
+                <button>
+                  <i class="fa-regular fa-trash-can"></i> </button>
+                </form>
+              </div>
             </td>
             
           </tr>
