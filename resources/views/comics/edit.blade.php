@@ -9,7 +9,7 @@
         <a href="{{route('comics.show', $comic)}}" class="btn btn-dark" >Mostra dettagli</a>
   
     </div>
-    <form action="{{ route('comics.update', $comic) }}" method="GET" class="my-5">
+    <form action="{{ route('comics.update', $comic) }}" method="POST" class="my-5">
         @csrf
         @method('PUT')
         <div class="container my-5">
