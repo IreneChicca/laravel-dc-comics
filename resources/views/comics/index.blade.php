@@ -59,7 +59,9 @@
         </tbody>
       </table>
     
-
+      <div class="mt-5 ">
+      {{ $comics->links('pagination::bootstrap-5') }}
+</div>
 
   </section>
 @endsection

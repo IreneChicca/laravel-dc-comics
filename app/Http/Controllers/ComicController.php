@@ -15,7 +15,8 @@ class ComicController extends Controller
     public function index()
     {
         $title = "Fumetti";
-        $comics = Comic::all();
+        // $comics = Comic::all();
+        $comics = Comic::paginate(10);
         return view('comics.index', compact('title','comics'));
     }
 
@@ -96,6 +97,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('message','Hai eliminato ');
     }
 }
