@@ -37,7 +37,7 @@
             <td scope="col">{{ $comic->sale_date}}</td>
             <td scope="col">{{ $comic->type}}</td>
             <td scope="col" >
-              <div class="d-flex">
+              <div class="d-flex justify-content-center">
                 <a href="{{route('comics.show', $comic)}}" class="me-2">
                <i class="fa-regular fa-eye"></i> </a>
                <a href="{{route('comics.edit', $comic)}}"class="me-2" >

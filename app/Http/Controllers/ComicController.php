@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\Validator;
 
 class ComicController extends Controller
 {
@@ -40,6 +41,9 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $data= $request->all();
+        
+        $this->validation($data);
+
         $comic = new Comic();
         $comic->fill($data);
         $comic->save();
@@ -99,4 +103,34 @@ class ComicController extends Controller
         $comic->delete();
         return redirect()->route('comics.index')->with('message','Hai eliminato ');
     }
+
+
+    private function validation($data){
+        
+        Validator::make(
+            $data, 
+            [
+                'title'=> 'required|string|max:50'
+                
+                
+            
+
+            ],
+            [
+                'title.required'=> 'Il titolo è obbligatorio',
+                'title.string'=> 'Il titolo deve essere una stringa',
+                'title.max'=> 'Il titolo può essere massimo di 50 caratteri'
+
+
+
+            ]
+
+        )->validate();
+
+
+
+    }
+
+
+
 }
