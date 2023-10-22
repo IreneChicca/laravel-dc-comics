@@ -110,8 +110,13 @@ class ComicController extends Controller
         Validator::make(
             $data, 
             [
-                'title'=> 'required|string|max:50'
-                
+                'title'=> 'required|string|max:50',
+                'series'=> 'required|string|max:50',
+                'price' => 'required',
+                'sale_date'=> 'required',
+                'type'=> 'required|string|max:50',
+                'thumb'=> 'required|url|max:400',
+                'description'=> 'string',
                 
             
 
@@ -119,8 +124,25 @@ class ComicController extends Controller
             [
                 'title.required'=> 'Il titolo è obbligatorio',
                 'title.string'=> 'Il titolo deve essere una stringa',
-                'title.max'=> 'Il titolo può essere massimo di 50 caratteri'
+                'title.max'=> 'Il titolo può essere massimo di 50 caratteri',
 
+                'series.required'=> 'La serie è obbligatoria',
+                'series.string'=> 'La serie deve essere una stringa',
+                'series.max'=> 'La serie può essere massimo di 50 caratteri',
+
+                'series.required'=> 'Il prezzo è obbligatorio',
+                
+                'price.required'=> 'La data di uscita è obbligatoria',
+
+                'type.required'=> 'Il tipo è obbligatorio',
+                'type.string'=> 'Il tipo deve essere una stringa',
+                'type.max'=> 'Il tipo può essere massimo di 50 caratteri',
+
+                'thumb.required'=> 'L\'immagine è obbligatoria',
+                'thumb.string'=> 'L\'immagine deve essere un url',
+                'thumb.max'=> 'L\'immagine può essere massimo di 400 caratteri',
+
+                'description.string'=> 'La descrizione deve essere una stringa',
 
 
             ]
